@@ -4,9 +4,9 @@ services:
     - docker
 
 script:
-    - docker build -t aberWARU/waru-maintenance-docker .
+    - docker build -t aberwaru/waru-maintenance-docker .
     - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-    - docker push aberWARU/waru-maintenance-docker
+    - docker push aberwaru/waru-maintenance-docker
 
 notifications:
     email:
