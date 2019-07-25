@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+    - docker
+
+script:
+    - docker build -t aberWARU/waru-maintenance-docker .
+    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    - docker push aberWARU/waru-maintenance-docker
+
+notifications:
+    email:
+        on_success: change
+        on_failure: change
