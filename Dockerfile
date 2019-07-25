@@ -2,14 +2,13 @@ FROM rocker/shiny
 
 LABEL maintainer "Tom Wilson <tpw2@aber.ac.uk"
 
-
 RUN apt-get update && apt-get install -y \
     sudo \
     libxml2-dev \
     libcurl4-openssl-dev \
     git
 
-RUN R -e "install.packages('shinythemes', repos = 'https://cloud.r-project.org/')"
+RUN R -e "install.packages('shinythemes', repos = 'https://cran.rstudio.com')"
 
 WORKDIR "/"
 
