@@ -20,7 +20,6 @@ RUN mv /waruPortal-maintenance /srv/shiny-server/
 COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf
 
 EXPOSE 80
-EXPOSE 443
 
 COPY shiny-server.sh /usr/bin/shiny-server.sh
 
